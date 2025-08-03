@@ -1,0 +1,18 @@
+=== Batch invariant
+
+In this section, you will find information on batch
+
+image:batchpage.png[BatchPage]
+
+=== Batch invariant attributes
+|=== 
+
+| *Field* | *Description*  
+
+| Batch | The name of the *[red]#batch#*.
+
+| System | The *[red]#system#* for which the *[red]#batch#* will be available.
+
+| Description | A description of the batch.
+
+|=== 

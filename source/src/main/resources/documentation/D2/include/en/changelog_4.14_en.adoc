@@ -1,0 +1,32 @@
+*Bug fixes*
+[square]
+* Page source were not correctly displayed on execution screen.
+* Manage correctly user name with spaces.
+* Fixed issue when updating application object value from Test Case Script page.
+* Fixed display of elapsed duration on "Testcase execution detail" page in websocket mode (autorefresh during execution) #2359
+* Fixed delete label on campaign definition #2360
+* Page Source and Screenshots are now taken on failed action even if it is forced to continue.
+
+*Improvements / New features*
+[square]
+* User refactor adding possibility to create local user even when Keycloak is activated (in order to support service account with APIKey). That allow to create as many APIKey as needed.
+* User can have 5 attributes and a comment field for specific needs.
+* Secrets managements. All subdata flagged as encrypted, will be hidden from execution results. All Properties name that contain PASSW will also automatically have its content hidden from execution reports.
+* On GUI application, if sikuli extension is available (hybrid mode), desktop screenshots are also taken (on top of current web screenshot)
+* When defining an element based on picture (using sikuli feature), all pictures are now saved at execution level. That makes execution analysis easier by better understanding which picture Cerberus used.
+* Total execution duration is now displayed on top of the page.
+* [GUI] On "Testcase script" page, when using picture= elements. Preview are larger and real size can be open on click. Also more than 1 picture are displayed in case several parameters could use several pictures.
+* [GUI] On "Testcase script" page, icons will show if step/action/control are fatal, have conditions or are disable.
+* [GUI] On "Testcase script" page, Highlight 'more option' icon on actions and controls when a condition is defined. #2357
+* [GUI] On "Run Testcase" page only the countries available on the selected systems are displayed #2274
+* [Engine] Sikuli engine now allow modifier keys. That allow to do CTRL+F5 for example. #1763
+* New control 'verifyElementTextContains' #2158
+* New Property 'getRawFromJson' #2355
+* New system variable : %system.LASTSERVICE_RESPONSE%. It allows to control and manipulate the last service call response in an easier way on GUI, APK or IPA tests that require service calls.
+* Better support of erratum on all controls. fix #2336
+* You can now configure if unsecured certificates are accepted at robot level.
+* Country attribute 2 is now map to browser lang. You can also force extra parameters at robot level. fix #2368
+
+*Warning to be considered before applying the version (deprecated features)*
+[square]
+* in case you don't use Keycloak for authentification yet, don't forget to change your tomcat conf changing on server.xml file from userRoleTable="usergroup" to userRoleTable="userrole" and roleNameCol="GroupName" to roleNameCol="Role"

@@ -1,0 +1,101 @@
+=== Login
+
+Opening Cerberus, you will be invited to login with the information you should have received from your Cerberus administrator.
+
+image:loginpage.png[LoginPage,300,300]
+
+NOTE: If you did not receive any credential, please contact your Cerberus administrator.
+
+NOTE: If you forgot your password, you can retrieve it following the forgot password wizard.
+
+Once you're logged in, you will access to the homepage.
+
+=== Homepage
+
+The homepage is showing information on ::
+* testcases set by application grouped by status (See the <<workflow>> section for more information);
+* testcase executions by tag  (the last ones by default, or customizable as described in the <<Customization>> section);
+* the application versions deployed on environment;
+
+image:homepage.png[Homepage]
+
+==== Customization
+
+You can customize the list of tag in a static way by selecting the tags from the combo.
+image:homepagecustomtag.png[HomepageCustomTag, 300, 300]
+
+But you can also define a search text that will be used to dynamicaly retreive the list of tag.
+image:homepagecustomtagtext.png[HomepageCustomTag, 300, 300]
+
+NB : If the list of tag is defined, the search Text will be ignored.
+
+
+=== First steps
+
+==== Glossary
+
+You will find below definitions of Cerberus common terms.
+
+* *System* : Business Application or CI (Configuration Item). It correspond to a group of application that needs to be tested. User access are defined at that level.
+* *Application* : Technical component. every Application is linked to a 'System'.
+* *Test Folder* : Group of TestCases, This is  flexible way to group and classify the test cases.
+* *TestCase* : Test scenario made of steps, actions and controls. (User story implementation in Cerberus)
+* *Label* : Mark to describe TestCases, so you can group and filter easily.
+* *Campaign* : Group of testcases (selected using labels) all linked to execution parameters (country - environment - browser - robot (optional)).
+
+==== Representation
+
+You will find in this section a graphical representation of the main Cerberus elements.
+
+Below the system :
+
+image:systemillustration.PNG[SystemIllustration]
+
+Below the test case :
+
+image:testcaseillustration.PNG[TestCaseIllustration]
+
+
+==== Tutorials
+
+*First steps as an administrator*
+
+NOTE: For non-admin users, please go to the next section : "First steps"
+
+You will find below setting steps for an application to test.
+
+* Create a system. More information here <<Invariants>>
+
+NOTE: _Check you are on the system you have just created (dropdown menu at top right)_ image:homepagesystem.png[MenuSystem,200,200,float="right",align="center"]
+
+* Create an environment.  Example : PROD FR (see <<Environment>>) 
+* Create an application. Example : Google (see <<Application>>)
+* Edit once again your application, you can now set new parameters. In tab environment, create PROD FR environment and fill http://www.google.fr in host section.
+
+Technical settings are now finished. Please refer to the following section to implement a TestCase.
+
+*First steps* 
+
+NOTE: Please verify with your administrator if system and application are already created.
+
+You will find below step to create and execute a TestCase.
+
+* Optionally you can created one or several Test Folder in order to host your test cases. Example : « Search Engine » (see <<Create test>>)
+* Access to TestCase list  and create a TestCase (cf <<Create TestCase>>). Mandatory fields : Test /  Application / TestCase ID (Should already be filled with a reference).
+
+NOTE: _Activation criteria tab : Activate for PROD your TestCase. (default setting not active for PROD) For the example, We will run our TestCase on PROD environment_
+
+* Your TestCase is now created, find it in the list using filters. 
+* Edit it (cf <<Implement TestCase>>)
+* Create your first step « Open Google »
+* Add your first action : *[red]#OpenURL#* value =   www.google.com  or *[red]#OpenURLWithBase#* value =  /  (if URL is already defined in application settings)
+* You can add a control : *[red]#VerifyTitle#* Title = Google
+* Save the script and click on Run button.
+* You are now on execution page. Select country / environment
+* Fill robot information. Mandatory fields :  IP / port / browser. 
+
+NOTE: _You must first run your selenium server (see <<Selenium>>)_
+
+* Click on the execution button. image:runbuttonexecution.png[BoutonRun,200,200,float="right",align="center"]
+
+*Congratulations, you've just executed your first Cerberus TestCase !*

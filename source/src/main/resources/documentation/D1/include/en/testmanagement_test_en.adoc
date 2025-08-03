@@ -1,0 +1,28 @@
+=== Test
+
+In this section, you will find information on *[red]#Test Folder#* in Cerberus.
+A *[red]#Test Folder#* is just a way to group and classify your test case. Every test case must be attached to a unique *[red]#Test Folder#*. Inside the same *[red]#Test Folder#*, every test case must have a different id. 2 test cases can have the same id if they belong to 2 different *[red]#Test Folder#*.
+
+image:testpage.png[TestPage]
+
+[%hardbreaks]
+NOTE: There are 2 *[red]#Test Folder#* that have a specific behavior and allow to automatically add before and after any steps execution.
+Those 2 tests are *[blue]#Pre Testing#* and *[blue]#Post Testing#*. They are identifying all test cases that will respectively be added at the beginning and at the end of the test cases.
+For a given test case running on an application #app1#, the following rules will apply :
+. Only test cases inside *[blue]#Pre Testing#* and *[blue]#Post Testing#* will be added if they belong to the same application #app1#.
+. Only active test cases will be added.
+. Only test cases that are within the From Major / From Minor and To Major / To Minor
+. The test cases will be executed sorted by test case id.
+
+=== Test attributes
+|===
+
+| *Field* | *Description*
+
+| Test | Test name.
+
+| Description | Description of the test.
+
+| Active | Define if the test is active. When Inactive, all associated test cases will be desactivated and will be allowed to be executed.
+
+|===

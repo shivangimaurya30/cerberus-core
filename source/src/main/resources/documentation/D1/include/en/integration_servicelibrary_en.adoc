@@ -1,0 +1,148 @@
+=== Introduction
+
+There are four service type :
+
+* SOAP : for SOAP endpoints
+* REST : for REST endpoints. Http with corresponding method (GET, POST,...)
+* FTP : interact with files using FTP protocol
+* KAFKA : for Apache Kafka Topics
+
+=== SOAP Service
+
+TBD
+
+=== REST Service
+
+TBD
+
+=== FTP Service
+
+TBD
+
+=== KAFKA Service
+
+In order to connect to a Kafka stream,  you need to feed the following parameters:
+
+* Service Path : should have the list of kafka and port target.
+    Ex : kafka-public-company-id.aivencloud.com:27453
+
+* Kafka Topic : the name of the topic to interact with
+    Ex : cerberus-example
+
+Additionally, you can define some extra key/value parameters inside Header tab.
+
+Ex for connecting to Kafka public Aiven service in SSL mode (value depend from your own configuration) : 
+|=== 
+
+| security.protocol | SSL
+
+| ssl.keystore.type | PKCS12
+
+| ssl.keystore.location | /opt/config/client.keystore.p12
+
+| ssl.keystore.password | password
+
+| ssl.truststore.location | /opt/config/client.truststore.jks
+
+| ssl.truststore.password | password
+
+| ssl.endpoint.identification.algorithm | 
+
+|=== 
+
+In Cerberus, depending on the value provided in Method field, you can :
+
+* produce an event to a topic -> PRODUCE
+* search for an event in a topic -> SEARCH
+    
+==== PRODUCE
+
+When producing an event to Kafka, you should define :
+
+. 'Kafka Key' that will contain the key of the event produced. Kafka will use that information in order to route it to correct partition.
+
+. 'Service Request' that will contain the content of the event sent to the corresponding topic.
+
+==== SEARCH
+
+When searching an event from Kafka, at the action level you will be allowed to provide :
+
+. Nb Evt : That define the max number of event to wait until the action is released with the associated content.
+
+. Evt Wait sec : That define the number of second that Cerberus will wait until it gets the target 'Nb Evt' events to retrieve.
+
+Cerberus will wait until either the number of event retrieved or time is reached.
+
+When a test case contain a callService action with a KAFKA SEARCH method, at the beginning of the execution, Cerberus will automatically store the latest offset of each partition of the selected topic. When the action is reached, Cerberus will automatically search the events starting at the previously saved offset. That prevent Cerberus to search on the full list of events inside the topic securing performance of the test over time.
+
+Additionally, you can *filter* the event with 2 method :
+
+* Fill a 'Event Filter Path' in jsonpath format and corresponding 'Event Filter Value' in order to filter from the *events content* and keep only the matching ones.
+
+* Fill a 'Message Filter Path' in jsonpath format and corresponding 'Message Filter Value' in order to filter from a json document that content **both header and body of the message**. 
+[source,]
+----
+{
+  "partition": 0,
+  "offset": 3145,
+  "header": {
+    "cerberus-token": "3027",
+    "testheader": "value2"
+  },
+  "value": {
+    "surname": "DUPONT",
+    "name": "Bernard41"
+  },
+  "key": "11"
+}
+----
+
+.Filter a specific header value
+====
+Header Filter Path = $.header.testheader
+
+Header Filter Value = value2
+====
+
+.Filter a specific Event value
+====
+Event Filter Path = $.surname
+
+Event Filter Value = DUPONT
+====
+
+
+[TIP]
+====
+Generate a functional unique key to Cerberus (e.g. 'cerberus%system.EXECUTIONID%') or use an existing one that will be available in the events to filter the results.
+
+====
+
+
+[TIP]
+====
+If you want to have *multiples conditions* you can use the following syntax as json path :
+image:kafka_search2.png[kafka_search_filters_multiple_conditions]
+
+====
+
+
+[TIP]
+====
+Extra Json path external documentation :
+https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html
+
+====
+
+**Avro Support**
+
+Cerberus support https://avro.apache.org/[Avro] data serialization system.
+You can just activate the feature by checking the corresponding checkbox and feed the Avro Schema registry URL.
+Cerberus will automatically generate the necessary Kafka Property in order to configure it.
+[NOTE]
+====
+
+So far only consume is supported.
+====
+
+

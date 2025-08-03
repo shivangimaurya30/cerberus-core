@@ -1,0 +1,33 @@
+<!-- Lib -->
+<div data-backdrop="static" class="modal fade center" id="addStepModal" tabindex="-1" role="dialog" aria-labelledby="addStepModal" aria-hidden="true">
+    <div class="modal-dialog nomargintop nomarginbottom modal-md">
+        <div class="modal-content">
+            <div class="modal-header card">
+                <span class="fa fa-tag fa-fw"></span>
+                <label id="modalTitle">Add Step</label>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group form-group-sm col-xs-12">
+                        <label class="control-label" for="description" name="descriptionField">Description</label>
+                        <input class="form-control input-sm" name="description" id="description" type="text">
+                    </div>
+                </div>
+                <div id="importDetail" style="display: none;">
+                </div>
+                <h3 class="modal-subtitle marginTop20">Import from Library</h3>
+                <div class="just-padding row">
+                    <input class="form-control input-sm" name="search" id="search" type="text" placeholder="Search">
+                    <div class="list-group list-group-root well" id="lib" style="max-height: 500px; overflow-y: scroll;">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" name="buttonClose">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" name="buttonAdd" id="addStepConfirm">Add</button>
+            </div>
+        </div>
+    </div>
+</div>

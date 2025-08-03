@@ -1,0 +1,643 @@
+/*
+ * Cerberus  Copyright (C) 2013  vertigo17
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This file is part of Cerberus.
+ *
+ * Cerberus is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Cerberus is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Cerberus.  If not, see <http://www.gnu.org/licenses/>.
+ *//* 
+    Created on : 4 déc. 2015, 16:08:55
+    Author     : cerberus
+*/
+.action-group label {
+    display:block !important;
+}
+
+.many{
+    display:initial!important;
+}
+
+.col-lg-5 input{
+    width: 80% !important;
+}
+
+.separator-left {
+    border-left: 1px solid #E3E3E3;
+    /*    width: inherit;*/
+    padding-left: 5px;
+    /*margin-right: 5px;*/
+}
+
+.separator-top {
+    /*    width: inherit;*/
+    padding-top: 15px;
+    /*margin-right: 5px;*/
+}
+
+.side-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.testTestCase #test {
+    font-weight: normal;
+    color: #4078c0;
+}
+
+.testTestCase #testCase {
+    font-weight: bold;
+    color: #4078c0;
+}
+
+.testTestCase #description {
+    font-weight: normal;
+}
+
+.step-list li:hover {
+    border-color:#46b8da;
+    background-color:#f8f8f8;
+    color:#555;
+    z-index: 2;
+}
+
+.step-list li .active {
+    border-color:#46b8da;
+    background-color:#f8f8f8;
+    color:#555;
+    z-index: 2;
+}
+
+.step-list li {
+    width: 100%;
+    cursor: pointer;
+}
+
+.property-list li {
+    width: 100%;
+    cursor: pointer;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.property-list li a{
+    padding: 10px 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+.property-list li a:hover {
+    border-color:#eea236;
+    background-color:#f0ad4e;
+    color:#fff;
+    z-index: 2;
+    color: whitesmoke;
+}
+
+.property-list li a .active {
+    border-color:#eea236;
+    background-color:#f0ad4e;
+    color:#fff;
+    z-index: 2;
+}
+
+.step-header {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.step-header #stepDescription {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.1;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.extra-info {
+    font-size: 24px;
+}
+
+
+.action {
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid rgb(44,123,229);
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.property {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-left: 6px solid #f0ad4e;
+    border-radius: 3px 3px 0 0;
+}
+@media (min-width: 1200px) {
+    .propertyButtons {
+        margin-top:32px;
+    }
+}
+.secondaryProperty{
+    border-left: 6px solid #7f8c8d;
+}
+
+.control {
+    position:relative;
+    font-size: 11px;
+    background-color: #f8f8f8;
+    padding: 0px;
+    margin-left: -4px;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid rgb(0,210,122);
+    border-radius: 4px;
+}
+
+.step {
+    font-size: 13px;
+    padding: 0px;
+    border: 0px solid #e5e5e5;
+    background-color: transparent;
+}
+
+.stepItem {
+    border-left: 4px solid rgb(39,188,253);
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.danger {
+    color: #a94442 !important;
+    background-color: #f2dede !important;
+}
+
+.well.list-group-item-danger{
+    background-color: #f2dede;
+}
+
+.no-border{
+    border: 0px;
+    box-shadow: 0 0px 0px;
+}
+
+.action .type {
+    background-color: #3498db;
+}
+
+.control .type {
+    background-color: #2ecc71;
+}
+
+.type {
+    width: 8px;
+    height: 99%;
+    float: left;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.drag-step-action {
+    height: 100%;
+}
+
+.drag-step-action span {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    margin-top: 17px;
+    cursor: move;
+}
+
+.extra-info span {
+    display: block;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.drag-step-action #labelDiv {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
+
+.drag-step-action #labelDiv span{
+    float: left;
+    margin-top: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: default;
+    font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+    .drag-step-action span {
+        margin-top: 40px;
+    }
+    .drag-step-action #labelDiv {
+        margin-top: 0px;
+    }
+    .drag-step-action #labelDiv span {
+        margin-top: 5px;
+    }
+}
+
+.tabSteps {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.step .content .description {
+    font-size: 18px;
+    line-height: 1.2;
+    box-shadow: none;
+    background-color: transparent;
+    font-weight: 700;
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.step .content .description:focus {
+    font-size: 18px;
+    line-height: 1.2;
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.step-action .content .description {
+    font-size: 15px;
+    line-height: 1.2;
+    box-shadow: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.step-action .content .description:focus {
+    font-size: 15px;
+    line-height: 1.2;
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.step-list .description {
+    line-height: 1.2;
+    box-shadow: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+
+.optionLabel{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: 600;
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.step-action {
+    background-color: white;
+}
+
+.step-action:hover {
+    background-color: #f8f8f8;
+}
+.step-action:hover input{
+    background-color: #f8f8f8;
+}
+.step-action:hover select{
+    background-color: #f8f8f8;
+}
+
+.step-action input::-webkit-input-placeholder {
+    color: red !important;
+}
+
+.step-action input:-moz-placeholder { /* Firefox 18- */
+    color: red !important;  
+}
+
+.step-action input::-moz-placeholder {  /* Firefox 19+ */
+    color: red !important;  
+}
+
+.step-action input:-ms-input-placeholder {  
+    color: red !important;  
+}
+
+.property-table input::-webkit-input-placeholder {
+    color: red !important;
+}
+
+.property-table input:-moz-placeholder { /* Firefox 18- */
+    color: red !important;  
+}
+
+.property-table input::-moz-placeholder {  /* Firefox 19+ */
+    color: red !important;  
+}
+
+.property-table input:-ms-input-placeholder {  
+    color: red !important;  
+}
+
+.property-table textarea::-webkit-input-placeholder {
+    color: red !important;
+}
+
+.property-table textarea:-moz-placeholder { /* Firefox 18- */
+    color: red !important;  
+}
+
+.property-table textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: red !important;  
+}
+
+.property-table textarea:-ms-input-placeholder {  
+    color: red !important;  
+}
+
+.lib-info {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.drag-step {
+    cursor: move;
+}
+
+.just-padding {
+    padding: 15px;
+}
+
+.list-group.list-group-root {
+    padding: 0;
+    overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+    margin-bottom: 0;
+}
+
+.sub-item {
+    margin-left: 15px;
+}
+
+.sub-sub-item {
+    margin-left: 30px;
+}
+
+.step-list li.list-group-item-danger:hover {
+    background-color: #e74c3c;
+    color: #FFFFFF;
+}
+
+.list-group-item-danger.active {
+    background-color: #e74c3c;
+    color: #FFFFFF;
+}
+
+.list-group-item-secondary {
+    background-color: #dfe4ea;
+}
+
+.list-group-item-warning.active {
+    background-color: #f0ad4e;
+    color: #FFFFFF;
+    border-color: #eea236;
+}
+
+.list-group-item-warning.active:hover {
+    background-color: #f0ad4e;
+    color: #FFFFFF;
+    border-color: #eea236;
+}
+
+.list-group-item-calm.active {
+    background-color:#fff;
+    color:#555;
+    background-color:#f8f8f8;
+    border: 2px solid rgb(39,188,253);
+    border-left: 4px solid rgb(39,188,253);
+}
+
+.list-group-item-calm.active:hover {
+    border-color:#46b8da;
+    background-color:#f8f8f8;
+    color:#555;
+}
+
+.list-group-item:hover>.badge, .nav-pills>:hover>a>.badge {
+    color: #5bc0de;
+    background-color: #fff;
+}
+
+.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+    color: #5bc0de;
+    background-color: #fff;
+}
+
+.list-group-item-calm>.badge {
+    color: #fff;
+    background-color: #5bc0de;
+}
+
+.add-btn {
+    margin: 1px;
+}
+
+.addStep-btn {
+    color: rgb(39,188,253);
+    background-color: rgb(229,247,255);
+    border-color: rgb(229,247,255);
+}
+
+.addStep-btn:hover {
+    color: rgb(229,247,255);
+    background-color: rgb(39,188,253);
+    border-color: rgb(39,188,253);
+}
+
+.addControl-btn {
+    color: rgb(0,210,122);
+    background-color: rgb(224,250,239);
+    border-color: rgb(224,250,239);
+}
+
+.addControl-btn:hover {
+    color: rgb(224,250,239);
+    background-color: rgb(0,210,122);
+    border-color: rgb(0,210,122);
+}
+
+.deleteItem-btn {
+    color: rgb(230,55,87);
+    background-color: rgb(252,231,235);
+    border-color: rgb(252,231,235);
+}
+
+.deleteItem-btn:hover {
+    color: rgb(252,231,235);
+    background-color: rgb(230,55,87);
+    border-color: rgb(230,55,87);
+}
+
+.config-btn {
+    color: rgb(245,128,62);
+    background-color: rgb(254,240,232);
+    border-color: rgb(254,240,232);
+}
+
+.config-btn:hover {
+    color: rgb(254,240,232);
+    background-color: rgb(245,128,62);
+    border-color: rgb(245,128,62);
+}
+
+.library-btn {
+    color: #727cf5;
+    background-color: rgb(221, 223, 247);
+    border-color: rgb(221, 223, 247);
+}
+
+.library-btn:hover {
+    color: rgb(221, 223, 247);
+    background-color: #727cf5;
+    border-color: #727cf5;
+}
+
+.useStep-btn {
+    color: rgb(221, 223, 247);
+    background-color: #727cf5;
+    border-color: #727cf5;
+}
+
+
+.btn-default.btn-dark {
+border-color: #1F1F1F;
+background-color: #1d1d1d;
+color:#fff;
+}
+
+.boutonGroup {
+width:85px;
+margin-top: 26px;
+margin-right : 5px;
+margin-bottom : 5px;
+}
+
+.action-group.toDelete,
+.action-group.toDelete .action,
+.action-group.toDelete .control,
+.action-group.toDelete input,
+.action-group.toDelete select {
+background-color: #e74c3c;
+}
+
+.control.toDelete,
+.control.toDelete input,
+.control.toDelete select {
+background-color: #e74c3c;
+}
+
+.btn-purple {
+background-color: #9b18c9;
+border-color: #9b18c9;
+color: white;
+}
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active,
+.btn-purple.active {
+background-color: #8915b2;
+border-color: #78139b;
+color: white;
+}
+.btn-purple.disabled:hover,
+.btn-purple.disabled:focus,
+.btn-purple.disabled:active,
+.btn-purple.disabled.active,
+.btn-purple[disabled]:hover,
+.btn-purple[disabled]:focus,
+.btn-purple[disabled]:active,
+.btn-purple[disabled].active,
+fieldset[disabled] .btn-purple:hover,
+fieldset[disabled] .btn-purple:focus,
+fieldset[disabled] .btn-purple:active,
+fieldset[disabled] .btn-purple.active {
+background-color: #9b18c9;
+border-color: #9b18c9;
+color: white;
+}
+
+.btn-grey {
+background-color: #a3a3a3;
+border-color: #a3a3a3;
+color: white;
+}
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey:active,
+.btn-grey.active {
+background-color: #969696;
+border-color: #8a8a8a;
+color: white;
+}
+.btn-grey.disabled:hover,
+.btn-grey.disabled:focus,
+.btn-grey.disabled:active,
+.btn-grey.disabled.active,
+.btn-grey[disabled]:hover,
+.btn-grey[disabled]:focus,
+.btn-grey[disabled]:active,
+.btn-grey[disabled].active,
+fieldset[disabled] .btn-grey:hover,
+fieldset[disabled] .btn-grey:focus,
+fieldset[disabled] .btn-grey:active,
+fieldset[disabled] .btn-grey.active {
+background-color: #a3a3a3;
+border-color: #a3a3a3;
+color: white;
+}
+
+.library-Icon{
+font-size:1.5em;
+padding-left:7px;
+}
+
+.loop-Icon{
+font-size:1.5em;
+padding-left:7px;
+}
+
+.info-Icon{
+font-size:24px;
+padding-left:7px;
+}
+
+.textArea{
+padding-right:1px;
+padding-left:2px;
+}

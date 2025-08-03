@@ -1,0 +1,23 @@
+=== Environment
+
+In this section, you will find information on how to manage environment in Cerberus.
+
+image:environmentpage.png[EnvironmentPage]
+
+=== Environment Attributes
+|=== 
+
+| *Field* | *Description*  
+
+| System | System.
+
+| Country | Country.
+
+| Environment | Environment.
+
+| Description | Description of the test.
+
+| Active | Define if the test is active. When Inactive, all associated test cases will be desactivated and will be allowed to be executed.
+
+|=== 
+

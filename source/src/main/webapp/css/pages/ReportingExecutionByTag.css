@@ -1,0 +1,169 @@
+/*
+ * Cerberus  Copyright (C) 2013  vertigo17
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This file is part of Cerberus.
+ *
+ * Cerberus is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Cerberus is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Cerberus.  If not, see <http://www.gnu.org/licenses/>.
+ *//* 
+    Created on : 20 août 2015, 13:47:28
+    Author     : cerberus
+*/
+.select2-result-tag {
+    padding-top:4px;
+    padding-bottom:3px
+}
+
+.select2-result-tag__title {
+    color:black;
+    font-weight:bold;
+    word-wrap:break-word;
+    line-height:1.1;
+    margin-bottom:4px
+}
+
+.select2-result-tag__detail {
+    margin-right:1em
+}
+.select2-result-tag__detail {
+    display:inline-block;
+    color:#000;
+    font-size:11px
+}
+
+.select2-result-tag__description {
+    font-size:13px;
+    color:#777;
+    margin-top:4px
+}
+
+.statusEnvCountryBrowser {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+
+.panelTOCLEAN {
+    border-color: #C5C200;
+}
+
+.panelTOCLEAN .panel-heading {
+    border-color: #C5C200;
+    color: #FFF;
+    background-color: #C5C200;
+}
+
+
+.status {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.progress-bar span {
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.progress-bar-queue span {
+    font-weight: bold;
+    color: white;
+    margin-top: 0px;
+}
+
+.test-link {
+    font-weight: normal;
+    margin-left: 10px;
+    color: #FFF;
+}
+
+.test-link:hover {
+    text-decoration: underline;
+}
+
+text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.total {
+    font-size: 20px;
+}
+
+#statusByEnvCountryBrowser span {
+    margin: 5px;
+}
+
+#ReportByStatusTable {
+    width: 40%; 
+    margin-left: 10px;
+}
+
+#tagFilter {
+    margin: 5px;
+}
+
+.percentage {
+    margin-right: 5px;
+    font-size: 80%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+.tooltip-inner {
+    max-width: none;
+    white-space: nowrap;
+}
+
+td.shortDesc{
+    border-top-color: transparent !important;
+    background-color: transparent!important;
+}
+
+tr:hover + tr.printBorder{
+    background-color: #f6f6f6!important;  
+    border-top-color: #f6f6f6!important;
+}

@@ -1,0 +1,11 @@
+*Bug fixes*
+[square]
+* Fixed issue in ReRun Button (from TestCase and Execution detail page) where environment was not selected.
+* Fixed various issues on Datalib modal when opened from TestCase page.
+* Fixed syntax %property.PROP.SUBDATA% that was not decoded.
+
+*Improvements / New features*
+[square]
+* [GUI] Various improvements on file attachement on Manual Executions.
+* [GUI] Display Changelog of latest version on homepage.
+* [ENGINE] Robot can now have https:// protocol specified inside the host name.

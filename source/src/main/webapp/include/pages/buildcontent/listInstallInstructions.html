@@ -1,0 +1,64 @@
+<!-- List Instalation Instructions -->
+<div data-backdrop="static" class="modal fade center" id="listInstallInstructions" tabindex="-1" role="dialog" aria-labelledby="manageTestDataLibDataModalLabel" aria-hidden="true">
+    <div class="modal-dialog nomargintop nomarginbottom modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close margin-right25" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="listInstallInstructionsModalLabel" name="listInstallInstructionsModalLabel">Installation Instructions</h4>
+            </div>
+            <div class="modal-body"> 
+                <div id="DialogMessagesArea">
+                    <div class="alert" id="DialogMessagesAlert"  style="display:none;">
+                        <strong><span class="alert-description" id="DialogAlertDescription"></span></strong>
+                        <button type="button" class="close" data-hide="alert"  aria-hidden="true">
+                            <span class="glyphicon glyphicon-remove alert-right alert-close pull-right"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="marginBottom10">
+                            <label for="selectBuildFrom" name="buildFieldFrom">From Build/Revision :</label>
+                            <select class="form-control" id="selectBuildFrom" name="build" style="width: 10%"></select>
+                            <select class="form-control" id="selectRevisionFrom" name="revision" style="width: 10%"></select>
+                            <label for="selectBuildTo" name="buildFieldTo">To Build/Revision :</label>
+                            <select class="form-control" id="selectBuildTo" name="build" style="width: 10%"></select>
+                            <select class="form-control" id="selectRevisionTo" name="revision" style="width: 10%"></select>
+                            <button type="button" class="btn btn-default" id="btnLoad" onclick="refreshlistInstallInstructions()" name="btnLoad">Load</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="listPanelInstallInstructions">
+                        <div class="col-xs-12">
+                            <table class="table table-bordered table-hover nomarginbottom" id="installInstructionsTable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" id="buildHeader" name="buildHeader">Build</th>
+                                        <th class="text-center" id="revisionHeader" name="revisionHeader">Revision</th>
+                                        <th class="text-center" id="applicationHeader" name="applicationHeader">Application</th>
+                                        <th class="text-center" id="releaseHeader" name="releaseHeader">Release</th>
+                                        <th class="text-center" id="linkHeader" name="linkHeader">Deploy Link</th>
+                                        <th class="text-center" id="versionHeader" name="versionHeader">Version</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="installInstructionsTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+                </div>   
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancelListInstall" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modal -->
+
+
+
+
+

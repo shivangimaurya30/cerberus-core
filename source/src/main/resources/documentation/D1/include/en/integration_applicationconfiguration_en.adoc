@@ -1,0 +1,69 @@
+=== Application
+
+In this section, you will find information on application configuration in Cerberus.
+
+image:applicationpage.png[ApplicationPage]
+
+=== Application attributes
+|=== 
+
+| *Field* | *Description*  
+
+| Application | Cell in column 2, row 3
+
+| Description | Cell in column 2, row 3
+
+| Sort | Cell in column 2, row 3
+
+| Type | The Type of the *[red]#application#* define whether the *[red]#application#* is a GUI, a service or a batch treatment. More detail in the <<Application type>> section.
+
+| Bug URL    | This correspond to the URL that points to the bug on the Bug system of the application. Variable %BUGID% can be used on the URL.
+
+| New Bug URL    | This correspond to the URL that points to the page where a new bug can be created on the Bug system of the application. More detail in the <<New Bug URL>> section.
+
+|=== 
+
+==== Application type
+
+Application type recognizable by Cerberus ::
+* GUI (*Web* application using Selenium backend)
+* APK (*Android* application using Appium backend)
+* IPA (*IOS* application using Appium backend)
+* FAT (*Fat* application using Sikuli backend)
+* BAT (*BATCH* application)
+* SRV (*Service*)
+* NONE (*Not defined*)
+
+==== New Bug URL
+
+This correspond to the URL that points to the page where a new bug can be created on the Bug system of the 
+*[red]#application#*. 
+
+The following variables can be used inside the URL :
+
+|=== 
+
+| *%TEST%* | Test
+
+| *%TESTCASE%* | Test case reference
+
+| *%TESTCASEDESC%* | Description of the test case
+
+| *%EXEID%* | Execution ID
+
+| *%EXEDATE%* | Start date and time of the execution
+
+| *%ENV%* | Environment
+
+| *%COUNTRY%* | Country
+
+| *%BUILD%* | Build
+
+| *%REV%* | Revision
+
+| *%BROWSER%* | Browser used during the test execution (ex : firefox, chrome,...)
+
+| *%BROWSERFULLVERSION%* | Browser fulle version used during the test execution (ex : firefox 47 LINUX,...)
+
+|=== 
+

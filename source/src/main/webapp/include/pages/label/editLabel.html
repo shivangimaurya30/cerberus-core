@@ -1,0 +1,113 @@
+<!--Edit label page-->
+<div data-backdrop="static" class="modal fade center" id="editLabelModal" role="dialog" aria-labelledby="editLabelModalLabel" aria-hidden="true">
+    <div class="modal-dialog nomargintop nomarginbottom modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="editLabelModalLabel" name="editLabelField">Edit Label</h4>
+            </div>
+            <div class="modal-body">
+
+                <!--edit form-->
+                <form id="editLabelModalForm" name="editLabelModalForm"  title="Edit Label" role="form">
+                    <div class="container-fluid center">
+                        <!-- messages area-->
+                        <div id="DialogMessagesArea">
+                            <div class="alert" id="DialogMessagesAlert"  style="display:none;">
+                                <strong><span class="alert-description" id="DialogAlertDescription"></span></strong>
+                                <button type="button" class="close" data-hide="alert"  aria-hidden="true">
+                                    <span class="glyphicon glyphicon-remove alert-right alert-close pull-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-2">
+                                <label for="id" name="idField">ID</label>
+                                <input type="text" class="form-control" name="id" id="id" aria-describedby="basic-addon1" readonly>
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="system" name="systemField">System</label>
+                                <select class="form-control"  id="system" name="system">
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-5">
+                                <label for="type" name="typeField">Type</label>
+                                <select class="form-control"  id="type" name="type">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="label" name="labelField">Label</label>
+                                <input type="text" class="form-control" name="label" id="label" aria-describedby="basic-addon1" maxlength="100">
+                            </div>
+                        </div>
+                        <ul id="tabsEdit" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a data-toggle="tab" href="#tabsLabEdit-1" id="tab1LabText" name="tabsLabEdit1">Definition</a></li>
+                            <li><a data-toggle="tab" href="#tabsLabEdit-2" id="tab2LabText" name="tabsLabEdit2">Long Description</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="center marginTop25 tab-pane fade in active" id="tabsLabEdit-1">
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label for="color" name="colorField">Color</label>
+                                        <div name="colorDiv" class="input-group colorpicker-component">
+                                            <input id="color" name="color"
+                                                   class="form-control" maxlength="45">
+                                            <span class="input-group-addon"><i></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group input-group col-sm-12" style="padding-right : 15px; padding-left: 15px">
+                                        <label for="parentLabel" name="parentLabelField">Parent Label</label>
+                                        <select type="text" class="form-control" name="parentLabel" id="parentLabel" aria-describedby="basic-addon1" maxlength="100"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label for="description" name="descriptionField">Description</label>
+                                        <input type="text" class="form-control" name="description" id="description" aria-describedby="basic-addon1" maxlength="250">
+                                    </div>
+                                </div>
+                                <div class="panel panel-default" id="panelReq" style="padding:10px;background-color: #fafafa;">
+                                    <div class="row">
+                                        <div class="form-group col-sm-4">
+                                            <label for="reqtype" name="reqtypeField">Requirement Type</label>
+                                            <select class="form-control"  id="reqtype" name="reqtype">
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                            <label for="reqstatus" name="reqstatusField">Status</label>
+                                            <select class="form-control"  id="reqstatus" name="reqstatus">
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                            <label for="reqcriticity" name="reqcriticityField">Criticity</label>
+                                            <select class="form-control"  id="reqcriticity" name="reqcriticity">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="center marginTop25 tab-pane fade in" id="tabsLabEdit-2">
+                                <div class="row">
+                                    <div class="form-group form-group-sm col-sm-12">
+                                        <label for="longdesc" name="longdescField">Long Description</label>
+                                        <textarea id="longdesc" name="longdesc" class="form-control wysiwyg" style="height: 200px"></textarea> 
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" name="buttonClose">Close</button>
+                <button type="button" id="editLabelButton" class="btn btn-primary" name="buttonEdit">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

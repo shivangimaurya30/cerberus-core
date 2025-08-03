@@ -1,0 +1,19 @@
+*Bug fixes*
+[square]
+* Fixed nullpointer when using verifyTextInElement in APK/IPA applications. #1894
+* Fixed issue when default robotconstrain poolsize was applyed even when execution does not require robot.
+* Fixed issue (http500) when AddToExecutionQueueV003 Servlet was triggered without tag parameter.
+* Fixed execution of iOS devices on the same time (added `wdaLocalPort` capability support)
+
+*Improvements / New features*
+[square]
+* Added posibility to link application type with robot type. Each robot can hold the application type information. That allow to avoid submiting execution to queue on impossible combination of application/robot.
+* GUI Refactor on invariant modal
+* GUI Refactor on testcase header modal
+* New Automatic job in order to automaticly cancel old queue entries that are still in 'Executing' state. you can tune its behaviour thanks to parameters : cerberus_automaticqueuecancellationjob_* By default, job will execute every 60 minutes and will caancel queue entries longuer than 3600 seconds (1 hour).
+* New Added automatic job in order to process queue entries. Job will execute every 30 minutes.
+* Properties can now be sorted with rank. rank 1 properties are primary properties that will be aloways displayed. rank 2 are secondary properties that will be hidden on execution report. That allow to hide complex properties from users in order to make execution report even easier to understand.
+
+*Warning to be considered before applying the version (deprecated features)*
+[square]
+* Removed deprecated fields (host, port, user and pass) from robot table.

@@ -1,0 +1,16 @@
+=== Deploy Type
+
+In this section, you will find information on deploy type.
+
+image:deploytypepage.png[Logo]
+
+=== Deploy Type attributes
+|=== 
+
+| *Field* | *Description*  
+
+| Deploy Type | A name of a deploy type.
+
+| Description | A description of the deploy type.
+
+|=== 

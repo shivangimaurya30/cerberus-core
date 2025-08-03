@@ -1,0 +1,66 @@
+====  Introduction
+
+You can use Browserstack as a robot infrastructure.
+Thanks to Browserstack support of Open Source projects, Cerberus benefit from Browserstack service in its integration chain. Many functionnal tests are executed through BrowserStack, which allows to validate Cerberus regression on a daily basis.
+
+http://browserstack.com/[image:browserstack-logo.png[Browserstack,200,100]]
+
+Browserstack advanced integration covers: 
+
+* An automatic mapping of capabilities (test name, tag/build values, verbose execution level,... ). Parameter `cerberus_browserstack_defaultexename` can be used in order to tune the name of the execution on Browserstack side (default to `Exe : %EXEID%`).
+
+* Automatic update of execution status
+
+* Easy access from Cerberus to Browserstack execution from the `robot` tab or `go to` menu. 
+
+image::browserstackexeshortcut.png[Execution Shortcut]
+
+To run your tests on BrowserStack Automate, you must:
+
+====  1) Upload the app:
+
+According to browserstack https://www.browserstack.com/app-automate/rest-api[documentation] the app can be uploaded through it's REST API:
+
+[source,]
+----
+curl -u "USERNAME:ACCESS_KEY" -X POST https://api.browserstack.com/app-automate/upload -F "file=@/path/to/app/file/Application-debug.apk"
+
+----
+
+The service answer will give your the app hash id:
+`bs://fecad32e3d0900192ccc27747d037ead7427b1ba`
+
+That ID needs to be attached to the application / environment (as an URL).
+
+====  2) Create/Update the Robot
+
+To execute the tests with browserstack the robot executor must be added/updated with the following values:
+
+* *Hostname* - `hub-cloud.browserstack.com`
+* *Host Username* - `browserstack_username`
+* *Host Password* - `browserstack_access_key`
+* *Port* - `80`
+* *Device Name* - Name of the device you want to use. ex : `Google Pixel 3`
+
+image::browserstackrobot.png[Robot Configuration]
+
+Optionaly, you can add some extra https://www.browserstack.com/app-automate/capabilities[capabilities] to appium such as:
+
+realMobile: `true`
+
+os_version: `os to test`
+
+image::browserstackcaps.png[Extra Capabilities]
+
+NOTE: The `app` and `device` capabilities will be automaticaly added by Cerberus taken from application and robot configuration. 
+
+
+====  3) Update the application
+
+The environment of the application to test with Cerberus must have the correct URL defined with the hashed id: `bs://<hashed_appid>` 
+
+image::browserstackapplication.png[Application Settings]
+
+====  4) Trigger the test
+
+Go to Run test page and select the test you want to execute with the previously created robot and trigger the execution.

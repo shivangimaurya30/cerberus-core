@@ -1,0 +1,22 @@
+=== Label
+
+In this section, you will find the bla bla
+
+image:labelpage.png[Logo]
+
+=== Label attributes
+|=== 
+
+| *Field* | *Description*  
+
+| System | System on which the label will be available.
+
+| Label | Name of the label.
+
+| Color | Color in #hex format.
+
+| Parent Label ID | Allow to link the *[red]#label#* to another one in order to group them and build a label hierarchy.
+
+| Description    | This is a short description of the label.
+
+|=== 

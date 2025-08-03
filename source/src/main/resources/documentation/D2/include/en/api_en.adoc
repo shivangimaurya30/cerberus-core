@@ -1,0 +1,15 @@
+When integrating Cerberus with any external tool, public API must be used.
+All public API are version managed in order to allow secure and stable integration.
+Each time the signature of the API is modified or behaviour has changed, it is implemented on a new version keeping existing version only subject to bugfix changes.
+
+Old version of Public API can disappear (after a deprecated period) from one version to another.
+In order to perform the impact analysis of the systems that are calling your Cerberus installation, you can use the parameter _cerberus_log_publiccalls_.
+Setting the parameter to Y will log every public API calls performed, reporting any deprecated calls that needs to be migrated to newer version of the same API.
+
+All Public API are secured using API Key.
+You can enable the API Authentification using the parameter `cerberus_apikey_enable` and define an API Key from a service account that can be created from the Administrator / User Management.
+The API Key value must be added on every calls inside the HTTP header `apikey`.
+[source,]
+----
+curl -X GET -H "apikey: 498e2d.............b4efee62fe0" http://localhost:8080/Cerberus/ManageV001
+----

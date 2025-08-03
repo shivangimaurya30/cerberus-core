@@ -1,0 +1,35 @@
+*.class
+
+# Package Files #
+# exclude all .jar files
+*.jar
+# except the ones in source/lib folder
+!/source/lib/*.jar
+
+*.ear
+.directory
+*~
+*.bak
+/source/target/
+/target
+/.project
+/.settings
+**/.factorypath
+*.iml
+/.idea/
+*.mwb.beforefix
+*.DS_Store
+
+source/\.idea/
+
+# docker-compose generated files #
+docker/compositions/*/localdata/
+
+
+# Chart dependencies
+**/helm/*.tgz
+*.tgz
+.history
+
+# Temporary log files
+hs_err_*.log

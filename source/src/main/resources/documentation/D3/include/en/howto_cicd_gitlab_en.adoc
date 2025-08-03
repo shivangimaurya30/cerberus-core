@@ -1,0 +1,1 @@
+You can integrate Cerberus easilly using documentation from this https://github.com/cerberustesting/cerberus-cicd-gitlab-plugin[repo]

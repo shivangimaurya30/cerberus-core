@@ -1,0 +1,155 @@
+:imagesdir: ./images/
+:toc: left
+:toc-title: Table of contents
+:sectnums:
+:lang: en
+:repo-url: https://github.com/cerberustesting/cerberus-source/tree/master/source/src/main/resources/documentation/D3/include/{lang}
+:contribution-message: Something is incorrect/missing in this section? Feel free to submit modification.
+
+// = image:logo.png[Logo] Cerberus : User Manual    link:./documentation_fr.html[image:fr.png[FR,20,20]] link:./documentation_en.html[image:en.png[EN,20,20]]
+
+
+[NOTE]
+.This document is under active development!
+=================================================
+If you find errors or missing information in this document, please don’t hesitate to submit an issue or open a pull request with a fix. 
+We encourage you to submit questions and discuss any aspects of the project on link:https://github.com/vertigo17/Cerberus[github].
+
+We are happy to welcome new contributors!
+=================================================
+
+---
+= Manage property on Testcase
+
+:file-to-include: howto_property_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+== Use static string (text)
+:file-to-include: howto_property_text_static_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+== Generate random string with defined length (text)
+:file-to-include: howto_property_text_random_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+== Get information from Web Page (getFromHtml)
+:file-to-include: howto_property_html_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+---
+= Test Data
+:file-to-include: howto_data_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Connect to a SQL data source
+:file-to-include: howto_data_sql_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Connect to a CSV file data source shared from Gdrive
+:file-to-include: howto_data_csv_gdrive_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+---
+= CICD
+:file-to-include: howto_cicd_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Jenkins
+:file-to-include: howto_cicd_jenkins_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Github actions
+:file-to-include: howto_cicd_github_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Gitlab CICD
+:file-to-include: howto_cicd_gitlab_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== CICD campaign result
+:file-to-include: howto_cicd_score_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+---
+= Notifications
+:file-to-include: howto_notif_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== email notifications 
+:file-to-include: howto_notif_email_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Slack notifications 
+:file-to-include: howto_notif_slack_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Google Chat notifications
+:file-to-include: howto_notif_googlechat_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Microsoft Teams notifications
+:file-to-include: howto_notif_teams_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+---
+= Issue Automated creation
+:file-to-include: howto_issue_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== JIRA issue creation 
+:file-to-include: howto_issue_jira_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== Github issue creation 
+:file-to-include: howto_issue_github_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+---
+= External tools
+:file-to-include: howto_externaltools_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+== JIRA Xray
+:file-to-include: howto_externaltools_xray_{lang}.adoc
+include::include/{lang}/{file-to-include}[]
+
+link:{repo-url}/{file-to-include}[image:edit-doc.png[FR,20,20]^] _{contribution-message}_
+
+

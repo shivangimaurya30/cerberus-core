@@ -1,0 +1,198 @@
+<!--Edit user page-->
+<div data-backdrop="static" class="modal fade center" id="editUserModal" role="dialog"
+     aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog nomargintop nomarginbottom modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="editUserModalLabel" name="editUserField">Edit User</h4>
+            </div>
+            <div class="modal-body">
+
+                <!--edit form-->
+                <form id="editUserModalForm" name="editUserModalForm" title="Edit User" role="form">
+                    <div class="container-fluid center">
+                        <!-- messages area-->
+                        <div id="DialogMessagesArea">
+                            <div class="alert" id="DialogMessagesAlert" style="display:none;">
+                                <strong><span class="alert-description" id="DialogAlertDescription"></span></strong>
+                                <button type="button" class="close" data-hide="alert" aria-hidden="true">
+                                    <span class="glyphicon glyphicon-trash alert-right alert-close pull-right"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <input type="hidden" class="form-control" name="id" id="id" aria-describedby="basic-editon1" readonly></input>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <label for="login" name="loginField">Login</label>
+                                <input type="text" class="form-control" name="login" id="login" aria-describedby="basic-editon1"></input>
+                            </div>
+                        </div>
+                        <ul id="tabsEdit" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a data-toggle="tab" href="#tabsCreate-1" id="createTab1Text" name="tabInformations">Informations</a></li>
+                            <li><a data-toggle="tab" href="#tabsCreate-2" id="createTab2Text" name="tabSystem">Systems</a></li>
+                            <li><a data-toggle="tab" href="#tabsCreate-3" id="createTab3Text" name="tabGroups">Roles</a></li>
+                            <li><a data-toggle="tab" href="#tabsCreate-4" id="createTab4Text" name="tabAdvanced">Advanced</a></li>
+                            <li><a data-toggle="tab" href="#tabsCreate-5" id="createTab5Text" name="tabTraca">Traceability</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="center marginTop25 tab-pane fade in active" id="tabsCreate-1">
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="name" name="nameField">Name</label>
+                                        <input type="text" class="form-control" name="name" id="name" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="team" name="teamField">Team</label>
+                                        <select style="width:100%;" class="form-control" name="team" id="team" aria-describedby="basic-editon1">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="email" name="emailField">Email</label>
+                                        <input type="text" class="form-control" name="email" id="email" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="defaultSystem" name="defaultSystemField">Default System</label>
+                                        <input type="text" class="form-control"  name="defaultSystem" id="defaultSystem" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="request" name="requestField">Request</label>
+                                        <select style="width:100%;" class="form-control" name="request" id="request" aria-describedby="basic-editon1">
+                                            <option value="Y">Y</option>
+                                            <option value="N">N</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="apiKey" name="apiKeyField">API Key</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="apiKey" id="apiKey" aria-describedby="basic-editon1">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button" id="setAPIKey">Set New Key</button>
+                                                <button class="btn btn-default" type="button" id="copyAPIKey">Copy</button>
+                                            </span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="comment" name="commentField">Comment</label>
+                                        <input type="text" class="form-control"  name="comment" id="comment" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center tab-pane fade marginTop25" id="tabsCreate-2">
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="systems" name="systemsField">Systems</label>
+                                        <button type="button" class="btn btn-default glyphicon glyphicon-check" id="editcheckall">Check All</button>
+                                        <button type="button" class="btn btn-default glyphicon glyphicon-unchecked" id="edituncheckall">Uncheck All</button>
+                                        <select style="width:100%;" class="form-control" multiple="multiple" name="systems" id="systems" aria-describedby="basic-editon1" size=15>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="center tab-pane fade marginTop25" id="tabsCreate-3">
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="groups" name="groupsField">Roles</label>
+                                        <select style="width:100%;" class="form-control" multiple="multiple" name="groups" id="groups" aria-describedby="basic-editon1" size=12>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="center marginTop25 tab-pane fade" id="tabsCreate-4">
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="attribute01" name="att01Field">Attribute 1</label>
+                                        <input type="text" class="form-control" name="attribute01" id="attribute01" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="attribute02" name="att02Field">Attribute 2</label>
+                                        <input type="text" class="form-control" name="attribute02" id="attribute02" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="attribute03" name="att03Field">Attribute 3</label>
+                                        <input type="text" class="form-control" name="attribute03" id="attribute03" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="attribute04" name="att04Field">Attribute 4</label>
+                                        <input type="text" class="form-control" name="attribute04" id="attribute04" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="attribute05" name="att05Field">Attribute 5</label>
+                                        <input type="text" class="form-control" name="attribute05" id="attribute05" aria-describedby="basic-editon1"></input>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="center marginTop25 tab-pane fade in" id="tabsCreate-5">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group col-sm-6">
+                                                <label name="lbl_created" for="created">Created</label>
+                                                <div>
+                                                    <input id="datecreated" name="datecreated" class="form-control" readonly="readonly" />     
+                                                </div>
+                                            </div> 
+                                            <div class="form-group col-sm-6">
+                                                <label name="lbl_creator" for="creator">Creator</label>
+                                                <div>
+                                                    <input id="usrcreated" name="usrcreated" class="form-control" readonly="readonly" />     
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                        <div class="row">
+                                            <div class="form-group col-sm-6">
+                                                <label name="lbl_lastModified" for="lastModified">Last Modified</label>
+                                                <div>
+                                                    <input id="datemodif" name="datemodif" class="form-control" readonly="readonly" />     
+                                                </div>
+                                            </div> 
+                                            <div class="form-group col-sm-6">
+                                                <label name="lbl_lastModifier" for="lastModifier">Last Modifier</label>
+                                                <div>
+                                                    <input id="usrmodif" name="usrmodif" class="form-control" readonly="readonly" />     
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>   
+
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" name="buttonClose">Close</button>
+                <button type="button" id="editUserButton" class="btn btn-primary" name="buttonEdit">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
